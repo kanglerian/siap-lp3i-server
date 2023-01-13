@@ -1,6 +1,14 @@
+require('dotenv').config();
 let express = require('express');
 let Validator = require('fastest-validator');
 let router = express.Router();
+
+const {
+  JWT_SECRET,
+  JWT_SECRET_REFRESH_TOKEN,
+  JWT_ACCESS_TOKEN_EXPIRED,
+  JWT_REFRESH_TOKEN_EXPIRED
+} = process.env
 
 const { User, RefreshToken } = require('../../models');
 
@@ -42,6 +50,7 @@ router.post('/login', async (req, res) => {
       message: 'wrong password'
     });
   }
+
   return res.json({
     status: 'success',
     data: {

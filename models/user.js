@@ -11,15 +11,15 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       User.hasMany(models.Applicant, {as: 'Presenter', foreignKey: 'idPresenter'});
+      User.hasMany(models.RefreshToken, {as: 'RefreshToken', foreignKey: 'userId'});
     }
   }
   User.init({
-    nik: DataTypes.STRING,
     fullName: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
-    position: DataTypes.BOOLEAN,
-    status: DataTypes.BOOLEAN
+    role: DataTypes.BOOLEAN,
+    status: DataTypes.BOOLEAN,
   }, {
     sequelize,
     modelName: 'User',

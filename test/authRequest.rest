@@ -1,0 +1,43 @@
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "kamassdin@gmail.com",
+  "password": "kamal123"
+}
+
+###
+
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "fullName": "asss",
+  "email": "kamasssaludin@gmail.com",
+  "password": "kamal123"
+}
+
+
+###
+
+POST http://localhost:3000/refreshToken
+Content-Type: application/json
+
+{
+  "token": "3i8ssj89sddf8s9dsanjdak",
+  "userId": 1
+}
+
+###
+
+GET http://localhost:3000/refreshToken?token=3i8ssj89sddf8s9dsanjdak
+
+
+###
+
+DELETE http://localhost:3000/auth
+Content-Type: application/json
+
+{
+  "userId": 1
+}

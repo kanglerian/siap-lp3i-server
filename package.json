@@ -13,7 +13,9 @@
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "express-validator": "^6.14.2",
+    "fastest-validator": "^1.16.0",
     "http-errors": "~1.6.3",
+    "jsonwebtoken": "^9.0.0",
     "morgan": "~1.9.1",
     "mysql2": "^2.3.3",
     "sequelize": "^6.28.0"

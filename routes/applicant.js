@@ -16,7 +16,8 @@ router.get('/', async (req, res) => {
     });
     return res.json({
       message: 'data successfully loaded.',
-      data: data
+      data: data,
+      cek: refreshToken
     });
   } catch (error) {
     return res.json({

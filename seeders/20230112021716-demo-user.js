@@ -5,29 +5,26 @@ module.exports = {
 
     await queryInterface.bulkInsert('Users', [
       {
-        nik: '202020',
         fullName: 'Nurul Ahyar',
         email: 'ahyar@gmail.com',
         password: 'ahyar123',
-        position: 0,
+        role: 0,
         status: true,
         createdAt: new Date(),
         updatedAt: new Date()
       },{
-        nik: '202021',
         fullName: 'Benny',
         email: 'benny@gmail.com',
         password: 'benny123',
-        position: 1,
+        role: 1,
         status: true,
         createdAt: new Date(),
         updatedAt: new Date()
       },{
-        nik: '202022',
         fullName: 'Galih',
         email: 'galih@gmail.com',
         password: 'galih123',
-        position: 1,
+        role: 1,
         status: false,
         createdAt: new Date(),
         updatedAt: new Date()

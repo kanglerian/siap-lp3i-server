@@ -7,6 +7,10 @@ let cors = require('cors');
 
 let indexRouter = require('./routes/index');
 
+// Authentication
+let authRouter = require('./routes/auth/authentication');
+let refreshTokenRouter = require('./routes/token/refreshToken');
+
 let applicantRouter = require('./routes/applicant');
 let applicantsocmedRouter = require('./routes/applicantsocmed');
 
@@ -30,6 +34,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+
+// Authentication
+app.use('/auth', authRouter);
+app.use('/refreshToken', refreshTokenRouter);
+
 app.use('/applicant', applicantRouter);
 app.use('/applicantsocmed', applicantsocmedRouter);
 
@@ -38,6 +47,7 @@ app.use('/user', userRouter);
 app.use('/school', schoolRouter);
 app.use('/profession', professionRouter);
 app.use('/socialmedia', socialmediaRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

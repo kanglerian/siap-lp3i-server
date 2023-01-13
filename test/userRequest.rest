@@ -1,0 +1,25 @@
+GET http://localhost:3000/user
+###
+GET http://localhost:3000/user/3
+###
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+  "fullName": "Sopyan Sauri",
+  "role": true,
+  "email": "kangsopyan@gmail.com",
+  "password": "sopyan123",
+  "status": true
+}
+###
+PATCH http://localhost:3000/user/2
+Content-Type: application/json
+
+{
+  "fullName": "Sopyan Sauri",
+  "role": true,
+  "email": "sopyan@gmail.com",
+  "password": "sopyan123",
+  "status": true
+}
